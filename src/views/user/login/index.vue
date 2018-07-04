@@ -2,7 +2,6 @@
   <main>
     <hr>
 		<alerter ref='alerter' v-bind:variant='variant' v-bind:message='message'></alerter>
-		
 		<b-form>
 			<b-form-group>
 				<b-form-input name="email" type="email" v-model="form.email" required placeholder='邮箱' v-bind:state="!$v.form.email.$invalid" aria-describedby="emailFeedback"></b-form-input>

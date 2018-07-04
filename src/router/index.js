@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+//前台模块
 import index from '@/views/home/index/index.vue'
-import show from '@/views/home/index/index.vue'
+import show from '@/views/home/show/index.vue'
+
+// 个人中心模块
 import register from '@/views/user/register/index.vue'
 import register1 from '@/views/user/register1/index.vue'
 import login from '@/views/user/login/index.vue'
@@ -17,12 +21,13 @@ Vue.use(Router)
 
 export default new Router({
 	base: __dirname,
-	mode: 'hash',
+	mode: 'history',
   routes: [
+		// 前台路由
     {
       path: '/',
       name: 'index',
-      component: index
+      component: index,
     },
 		{
 			path: '/show',
@@ -54,10 +59,12 @@ export default new Router({
 			name: 'vlogin1',
 			component: vlogin1
 		},
+		
+		// 个人中心路由
 		{
 			path: '/user',
 			name: 'user',
-			component: uindex
+			component: uindex,
 		},
 		{
 			path: '/user/shopcar',
